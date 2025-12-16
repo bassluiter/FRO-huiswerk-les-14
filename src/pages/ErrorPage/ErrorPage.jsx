@@ -5,7 +5,7 @@ function ErrorPage() {
     return (
         <body>
             <main>
-                <h1>Error 404 pagina niet gevonden! Klik <NavLink to="/">hier</NavLink> om terug te gaan!</h1>
+                <h1>Error 404 pagina niet gevonden! terug naar <NavLink to="/">homepage</NavLink></h1>
             </main>
         </body>
 
