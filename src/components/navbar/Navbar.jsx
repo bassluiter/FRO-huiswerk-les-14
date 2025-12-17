@@ -6,13 +6,13 @@ import './Navbar.css'
 function Navbar() {
 
     return (
-        <div className="outer">
-            <nav className="inner">
+        <div className="outer-nav">
+            <nav className="inner-nav">
                 <div className="img-wrapper">
                     <picture>
                         <source
                             srcSet={logoSmall}
-                            media="(max-width: 530px)"
+                            media="(max-width: 600px)"
                         />
                         <img
                             src={logoMedium}

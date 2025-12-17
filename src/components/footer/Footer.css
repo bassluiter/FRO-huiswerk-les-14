@@ -1,0 +1,24 @@
+.outer-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: var(--clr-spring-green);
+}
+
+.inner-footer {
+    color: var(--clr-jet-black);
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: -1px;
+    font-style: italic;
+    margin: 0 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .inner-footer {
+        font-size: .8em;
+    }
+
+}

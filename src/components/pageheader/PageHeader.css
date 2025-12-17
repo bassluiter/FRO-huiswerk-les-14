@@ -1,0 +1,36 @@
+
+.inner-header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 100px 20px 50px 20px;
+    height: 100%;
+}
+
+.page-header {
+    max-width: 1200px;
+    text-align: center;
+    color: var(--clr-jet-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.bg-clr-plat {
+    background-color: var(--clr-platinum);
+}
+
+@media (max-width: 530px) {
+
+    .inner-header {
+        padding-top: 50px;
+    }
+    .inner-header > h1 {
+        font-size: 1.7rem;
+    }
+
+
+}
+

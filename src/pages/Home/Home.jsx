@@ -1,5 +1,6 @@
 import './Home.css'
 import dataSet from '../../constants/data.json';
+import logo from '../../assets/logo-white.png'
 
 
 function Home() {
@@ -8,12 +9,13 @@ function Home() {
 
     return (
         <>
-            <main>
+            <section className="page-container">
+                <img src={logo} alt="Company logo"/>
+            </section>
 
-                <h1>Bij Blogventure geloven we in de kracht van woorden</h1>
-
-
-            </main>
+            <section className="home-section-2">
+                <h1>Bij blogventure geloven wij in de kracht van woorden<span className="asterix">*</span></h1>
+            </section>
         </>
     );
 }

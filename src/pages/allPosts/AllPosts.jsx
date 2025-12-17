@@ -1,35 +1,43 @@
+
+
 import './AllPosts.css'
 import dataSet from "../../constants/data.json";
-import {Link} from "react-router-dom";
+import PageHeader from "../../components/pageheader/PageHeader.jsx";
+import BlogCard from "../../components/blogcard/BlogCard.jsx";
 
 function AllPosts() {
-
     const numberOfPost = dataSet.length;
 
     return (
-        <main className="outer-container">
+        <>
+            <PageHeader headerText={`Bekijk alle ${numberOfPost} posts op het platform`} bgClr="bg-clr-plat"/>
+            <main className="outer-all-post">
+                <div className="inner-all-post">
+                    {dataSet.map(data => (
+                        <BlogCard
+                            id={data.id}
+                            key={data.id}
+                            title={data.title}
+                            author={data.author}
+                            shares={data.shares}
+                            comments={data.comments}
+                        />
 
-            <div className="inner">
-                <h1>Bekijk alle {numberOfPost} post op het platform</h1>
-                {dataSet.map(data => (
+                        // <article key={data.id}>
+                        //     <header className="blog-title-wrapper">
+                        //         <Link to={`/post/${data.id}`} className="link-style-reset">
+                        //             <h2>{data.title}</h2>
+                        //         </Link>
+                        //         <address className="author">({data.author})</address>
+                        //     </header>
+                        //     <p>{data.comments} reacties – {data.shares} keer gedeeld</p>
+                        // </article>
 
-                    <Link to={`/post/${data.id}`} className="link-style-reset">
-                        <article key={data.id} >
-                        <span className="blog-title-wrapper">
-                            <h2>{data.title}</h2>
-                            <h4 className="author">({data.author})</h4>
-                        </span>
-                            <p>{data.comments} reacties - {data.shares} keer gedeeld</p>
-                        </article>
-                    </Link>
+                    ))}
+                </div>
+            </main>
+        </>
 
-
-
-                ))}
-
-            </div>
-
-        </main>
     );
 }
 
